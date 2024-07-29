@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    overflow-y: none;
 }
 
 body {
@@ -302,15 +303,15 @@ body {
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
     .home-content h1 {
-        font-size: 2rem;
-    }
-
-    .home-content h3 {
         font-size: 1.5rem;
     }
 
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+
     .home-content p {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .btn-box a {
