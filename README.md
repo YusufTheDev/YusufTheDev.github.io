@@ -10,12 +10,12 @@ This personal website is designed to provide a comprehensive view of my professi
 
 - **About Me**: An introduction to who I am and my background.
 - **Projects**: A showcase of my notable projects with links to their respective GitHub repositories.
-- 
+  
 ## Technologies Used
 
 - **HTML5**: For structuring the content of the website.
 - **CSS3**: For styling and layout.
-- 
+  
 ## Usage
 
 - Open the website in your favorite web browser to explore the different sections.
