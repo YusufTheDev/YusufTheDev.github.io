@@ -69,7 +69,7 @@ body {
     height: 100%;
     background: #081b29;
     animation: showRight 1s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 0.7s;
     z-index: 2;
 }
 
