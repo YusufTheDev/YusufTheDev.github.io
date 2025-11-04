@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3vh 5vw;
+    background-color: rgba(8, 27, 41, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 1.5rem;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2rem;
+    transition: .3s;
+    z-index: 1;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/* EXPERIENCE SECTION */
+.experience {
+    min-height: 100vh;
+    display: flex;
+    padding: 3vh 5vw;
+    padding-bottom: 8vh; /* space at bottom */
+}
+
+.experience-content {
+    position: relative;
+    padding: 7vh 1vw;
+    max-width: 80vw;
+    line-height: 1.2;
+}
+
+/* Main heading */
+.experience-content h1 {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.experience-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Each Experience Block */
+.experience-item {
+    margin-top: 7vh;
+}
+
+/* Company name */
+.experience-item h3 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00abf0;
+}
+.experience-item h3::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Role title */
+.experience-item h4 {
+    position: relative;
+    font-size: 1.25rem;
+    margin-top: 0.4rem;
+}
+.experience-item h4::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.45s;
+}
+
+/* Date + location */
+.experience-item p {
+    position: relative;
+    width: 70%;
+    font-size: 1.15rem;
+    margin: 0.6rem 0 1.2rem;
+    color: #9dc2d6;
+}
+.experience-item p::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Description list */
+.experience-item ul {
+    list-style: none; /* removes bullet points */
+    margin-left: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    position: relative;
+}
+.experience-item ul::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 0.55s;
+}
+.experience-item ul li {
+    margin-bottom: 0.6rem;
+    transition: color 0.3s ease;
+}
+.experience-item ul li:hover {
+    color: #00abf0;
+}
+
+/* ANIMATION KEYFRAME */
+@keyframes showRight {
+    100% { width: 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .experience-content {
+        max-width: 100%;
+    }
+    .experience-content h1 {
+        font-size: 2rem;
+    }
+    .experience-item h3 {
+        font-size: 1.5rem;
+    }
+    .experience-item h4 {
+        font-size: 1rem;
+    }
+    .experience-item p {
+        font-size: 1rem;
+        width: 90%;
+    }
+    .experience-item ul {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .navbar a {
+        font-size: 0.7rem;
+    }
+    .experience-content {
+        padding-top: 9vh;
+    }
+    .experience-content h1 {
+        font-size: 1.5rem;
+    }
+    .experience-item h3 {
+        font-size: 1.2rem;
+    }
+    .experience-item h4 {
+        font-size: 0.9rem;
+    }
+    .experience-item p,
+    .experience-item ul {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-height: 300px) {
+    .logo {
+        font-size: 0.75rem;
+    }
+    .navbar a {
+        font-size: 0.6rem;
+    }
+    .experience-content h1 {
+        font-size: 1rem;
+    }
+    .experience-item h3 {
+        font-size: 0.85rem;
+    }
+    .experience-item h4 {
+        font-size: 0.7rem;
+    }
+    .experience-item p,
+    .experience-item ul {
+        font-size: 0.6rem;
+    }
+}
