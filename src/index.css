@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4c4cff;
+  /* Deeper Blue */
+  --secondary-color: #7b2cbf;
+  /* Deep Purple */
+  --accent-color: #00b4d8;
+  /* Cyan accent */
+  --bg-color: #0f1016;
+  /* Very dark blue-black background */
+  --text-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+}

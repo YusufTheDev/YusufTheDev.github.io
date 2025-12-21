@@ -1,0 +1,208 @@
+.experience-page {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: var(--primary-color);
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+/* Reinforce Layout */
+.timeline-item {
+    margin-bottom: 4rem;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    /* explicit fix */
+    clear: both;
+    /* ensure stacking */
+}
+
+.timeline-item:nth-child(odd) {
+    float: left;
+    left: 0;
+    padding-right: 40px;
+    text-align: right;
+    clear: both;
+}
+
+.timeline-item:nth-child(even) {
+    float: right;
+    left: 0;
+    /* Float handles positioning, remove relative shift */
+    padding-left: 40px;
+    text-align: left;
+    clear: both;
+    margin-top: 4rem;
+    /* Offset to look like timeline */
+}
+
+/* Clearfix for timeline */
+.timeline::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Remove weird margins in even child due to float flow */
+.timeline-item:nth-child(even) {
+    margin-top: 0;
+    left: 0 !important;
+    /* Override potential previous logic */
+}
+
+/* Timeline Dot/Icon */
+.timeline-icon {
+    position: absolute;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 0 0 6px rgba(36, 36, 36, 1);
+    z-index: 10;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+    right: -20px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -20px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
+}
+
+.timeline-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.timeline-header h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.timeline-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
+    /* right align for odd items */
+}
+
+.timeline-item:nth-child(even) .timeline-meta {
+    justify-content: flex-start;
+}
+
+.timeline-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-description {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.timeline-description li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    /* padding-right: 20px; for odd items, handled via direction */
+}
+
+/* Adjustments for right-aligned text (odd items) logic usually requires text-align right */
+/* But list bullets look weird on right aligned text if not careful. */
+/* Let's keep description text left aligned for readability inside the card */
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+    /* Reset text align inside card */
+}
+
+.timeline-item:nth-child(odd) .timeline-meta {
+    justify-content: flex-start;
+    /* Reset meta align */
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-icon,
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: 0px;
+        right: auto;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+}
