@@ -110,3 +110,12 @@ dist
 
 # Legacy Site
 legacy_site/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
