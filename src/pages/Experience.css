@@ -104,12 +104,14 @@
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    will-change: transform;
+    /* Optimize performance */
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     border-color: var(--primary-color);
 }
 
@@ -174,35 +176,48 @@
     /* Reset meta align */
 }
 
+/* Mobile specific fixes */
+/* Mobile specific fixes */
 @media screen and (max-width: 768px) {
     .timeline::before {
-        left: 20px;
+        left: 30px;
+        /* Shift line slightly right */
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 60px;
-        padding-right: 0;
-        left: 0;
+        padding-left: 80px !important;
+        /* Force padding to clear icon */
+        padding-right: 0 !important;
+        left: 0 !important;
         margin-bottom: 3rem;
+        float: none !important;
+        clear: both;
     }
 
-    .timeline-item:nth-child(odd) {
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        float: none;
+        width: 100%;
         text-align: left;
         padding-right: 0;
+        left: 0 !important;
     }
 
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
+    /* Fix Icon Positioning on Mobile */
+    /* NOTE: .timeline-content creates a containing block due to transform, so we must use negative left to pull icon out */
     .timeline-item:nth-child(odd) .timeline-icon,
     .timeline-item:nth-child(even) .timeline-icon {
-        left: 0px;
-        right: auto;
+        left: -60px !important;
+        /* Pull icon out of the card to align with line */
+        right: auto !important;
+        top: 20px;
     }
 
     .timeline-content {
         padding: 1.5rem;
+        word-wrap: break-word;
+        overflow: visible;
+        /* Ensure icon is visible outside */
     }
 }

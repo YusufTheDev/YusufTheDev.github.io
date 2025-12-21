@@ -67,10 +67,10 @@ const Experience = () => {
                     <motion.div
                         key={index}
                         className="timeline-item"
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, type: "spring", stiffness: 50 }}
                     >
                         <div className="timeline-content">
                             <div className="timeline-header">
