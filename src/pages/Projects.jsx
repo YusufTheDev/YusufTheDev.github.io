@@ -5,6 +5,26 @@ import './Projects.css';
 
 const projectsData = [
     {
+        title: "EcoRestore",
+        description: "Real-Time Carbon Dashboard visualizing project impact. Features extensive material database, intelligent logistics engine, and smart recommendations for carbon reduction.",
+        image: "/images/ecorestore.png",
+        tech: ["PHP", "Twig", "Dockerfile", "Vue.js", "Symfony", "PostgreSQL", "Docker", "TailwindCSS"],
+        links: {
+            github: "https://github.com/YusufTheDev/eco_restore",
+            live: "https://eco-restore.onrender.com"
+        }
+    },
+    {
+        title: "Nebula Flux",
+        description: "Automated email summarization app. Features secure Google OAuth authentication, usage logs, interactive dashboard, and AI-powered summaries.",
+        image: "/images/nebulaflux.png",
+        tech: ["React", "Python", "Flask", "Gemini API", "TailwindCSS"],
+        links: {
+            github: "https://github.com/YusufTheDev/Gmail-Summarizer"
+        }
+    },
+
+    {
         title: "Automated Crypto Trading Bot",
         description: "A 24/7 automated cryptocurrency trading bot executing trades based on Bollinger Bands and RSI indicators. Integrated position sizing and risk management strategies.",
         image: "/images/cryptobot.png",
