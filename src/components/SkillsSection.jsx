@@ -3,7 +3,7 @@ import './SkillsSection.css';
 import { motion } from 'framer-motion';
 
 const skillsData = {
-    "Programming Languages": ["Python", "SQL", "C++", "C", "C#", "JavaScript", "TypeScript", "Java", "R", "HTML", "CSS", "PHP", "Haskell"],
+    "Programming Languages": ["Python", "SQL", "Go", "C++", "C", "C#", "JavaScript", "TypeScript", "Java", "R", "HTML", "CSS", "PHP", "Haskell"],
     "Frameworks": ["React", "Next.js", "Flask", "Express.js", "Node.js", "Angular"],
     "Libraries": ["Pandas", "PyTorch", "pytest", "NumPy", "TensorFlow", "XGBoost", "Socket.io", "Tailwind CSS", "Plotly"],
     "Databases": ["MySQL", "MongoDB", "PostgreSQL", "SQLite"],
