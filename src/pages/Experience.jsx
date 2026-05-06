@@ -5,6 +5,18 @@ import './Experience.css';
 
 const experienceData = [
     {
+        title: "Intern Engineer",
+        company: "Shopify — Banking Security",
+        date: "May 2026 – Aug 2026",
+        location: "Toronto, ON · Remote",
+        description: [
+            "Joined the Banking Security team as an Early Talent intern engineer, contributing to systems that protect Shopify's financial products at scale.",
+            "Building and shipping features across the security stack in collaboration with cross-functional product, design, and engineering partners.",
+            "Ramping up on Shopify's codebase, tooling, and culture while pairing with mentors to deliver production-quality work."
+        ],
+        type: "work"
+    },
+    {
         title: "Research Assistant",
         company: "McMaster University DeGroote School of Business",
         date: "Oct 2025 – Present",
