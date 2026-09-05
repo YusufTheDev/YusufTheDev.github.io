@@ -1,9 +1,9 @@
-# Yusuf's Portfolio �‍💻
+# Yusuf's Portfolio
 
 Welcome to my personal portfolio website, where I showcase my projects, skills, and professional experience.
 
 ## Live Site
-🌐 **[YusufTheDev.github.io](https://YusufTheDev.github.io)**
+**[YusufTheDev.github.io](https://YusufTheDev.github.io)**
 
 ## About
 This site serves as a central hub for my work as a Software Engineer. It features:
@@ -18,4 +18,3 @@ Built with modern web technologies:
 - **Glassmorphism Design**
 
 ---
-© 2025 Yusuf. Built with 💜.
