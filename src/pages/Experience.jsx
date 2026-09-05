@@ -5,6 +5,18 @@ import './Experience.css';
 
 const experienceData = [
     {
+        title: "Software Engineer Intern",
+        company: "Shopify",
+        date: "May 2026 – Aug 2026",
+        location: "Toronto, ON, Canada",
+        description: [
+            "Shipped full-stack security features for financial systems used by merchants at scale, improving enforcement and visibility of account-level restrictions.",
+            "Fixed a critical access-control regression that could incorrectly re-enable sensitive money-movement actions for restricted accounts.",
+            "Implemented backend state-evaluation logic, frontend restriction indicators, and regression tests to improve correctness, reliability, and user clarity across production banking workflows."
+        ],
+        type: "work"
+    },
+    {
         title: "Research Assistant",
         company: "McMaster University DeGroote School of Business",
         date: "Oct 2025 – Present",
