@@ -78,8 +78,8 @@
 .timeline-icon {
     position: absolute;
     top: 20px;
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
     background: var(--primary-color);
     border-radius: 50%;
     display: flex;
@@ -87,16 +87,51 @@
     align-items: center;
     color: white;
     font-size: 1.2rem;
-    box-shadow: 0 0 0 6px rgba(36, 36, 36, 1);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px rgba(255, 255, 255, 0.15);
     z-index: 10;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.timeline-icon.has-image {
+    background: #ffffff;
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.timeline-icon.has-image img[src*="shopify"],
+.timeline-icon.has-image img[src*="gdg"] {
+    object-fit: contain;
+    padding: 6px;
+}
+
+.timeline-icon.has-image.xenix-icon,
+.timeline-icon.has-image img[src*="xenix"] {
+    background-color: #000000;
+}
+
+.timeline-icon.has-image.xenix-icon img {
+    transform: scale(1.18);
 }
 
 .timeline-item:nth-child(odd) .timeline-icon {
-    right: -20px;
+    right: -26px;
 }
 
 .timeline-item:nth-child(even) .timeline-icon {
-    left: -20px;
+    left: -26px;
+}
+
+.timeline-item:hover .timeline-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 7px var(--primary-color), 0 8px 24px rgba(76, 76, 255, 0.4);
 }
 
 .timeline-content {
@@ -208,7 +243,7 @@
     /* NOTE: .timeline-content creates a containing block due to transform, so we must use negative left to pull icon out */
     .timeline-item:nth-child(odd) .timeline-icon,
     .timeline-item:nth-child(even) .timeline-icon {
-        left: -60px !important;
+        left: 4px !important;
         /* Pull icon out of the card to align with line */
         right: auto !important;
         top: 20px;

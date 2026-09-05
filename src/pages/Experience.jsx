@@ -14,7 +14,8 @@ const experienceData = [
             "Fixed a critical access-control regression that could incorrectly re-enable sensitive money-movement actions for restricted accounts.",
             "Implemented backend state-evaluation logic, frontend restriction indicators, and regression tests to improve correctness, reliability, and user clarity across production banking workflows."
         ],
-        type: "work"
+        type: "work",
+        image: "/images/shopify.png"
     },
     {
         title: "Research Assistant",
@@ -26,7 +27,8 @@ const experienceData = [
             "Built ETL pipelines using Python (Pandas, BeautifulSoup, Selenium) and SQL for large-scale data processing.",
             "Developed ML models (scikit-learn, XGBoost) for predictive analysis, applying SHAP for model explainability."
         ],
-        type: "research"
+        type: "research",
+        image: "/images/degroote.png"
     },
     {
         title: "Member",
@@ -37,7 +39,8 @@ const experienceData = [
             "Participated in workshops and hackathons focused on Google Cloud, AI/ML, and web technologies.",
             "Collaborated with peers on hands-on projects integrating APIs and automation tools."
         ],
-        type: "community"
+        type: "community",
+        image: "/images/gdg.png"
     },
     {
         title: "Software Engineer Intern",
@@ -49,7 +52,8 @@ const experienceData = [
             "Applied machine learning models and automation techniques to improve recommendation accuracy and reduce manual processing time.",
             "Collaborated with developers and designers to integrate intelligent features that improved overall platform performance and user engagement."
         ],
-        type: "work"
+        type: "work",
+        image: "/images/u4ria.png"
     },
     {
         title: "Software Engineer | COO & Co-Founder",
@@ -61,7 +65,8 @@ const experienceData = [
             "Directed product development and software infrastructure, enhancing operational efficiency and scalability.",
             "Delivered full-stack AI-driven solutions using Python, Flask, and modern web technologies."
         ],
-        type: "work"
+        type: "work",
+        image: "/images/xenix.png"
     }
 ];
 
@@ -98,10 +103,14 @@ const Experience = () => {
                                     <li key={i}>{desc}</li>
                                 ))}
                             </ul>
-                            <span className="timeline-icon">
-                                {item.type === 'work' ? <FaBriefcase /> : item.type === 'community' ? <FaUsers /> : <FaGraduationCap />}
-                            </span>
                         </div>
+                        <span className={`timeline-icon ${item.image ? 'has-image' : ''} ${item.company.toLowerCase().includes('xenix') ? 'xenix-icon' : ''}`}>
+                            {item.image ? (
+                                <img src={item.image} alt={item.company} className="timeline-img" />
+                            ) : (
+                                item.type === 'work' ? <FaBriefcase /> : item.type === 'community' ? <FaUsers /> : <FaGraduationCap />
+                            )}
+                        </span>
                     </motion.div>
                 ))}
             </div>
